@@ -20,7 +20,7 @@ export default class CommandHandler{
 
         try{
             const words = msg.content.slice(prefix.length).split(" ");
-            await this.commandsMap.get(words[0])?.execute(msg, words.slice(1))
+            await this.commandsMap.get(words[0]).execute(msg, words.slice(1))
         }catch(error){
             await msg.reply(error.message)
         }
