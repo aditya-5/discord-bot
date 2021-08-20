@@ -5,9 +5,6 @@ export  class Guilds{
         return await SavedGuild.findById(id) ?? SavedGuild.create({"_id": id, "prefix" : "."})
     }
 
-    // async set(id, prefix){
-    //     return await SavedGuild.findOneAndUpdate(id) ?? SavedGuild.create({"_id": id, "prefix" : "."})
-    // }
 
     
 }

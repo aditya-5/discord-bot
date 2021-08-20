@@ -21,3 +21,5 @@ await mongoose.connect(process.env.DB_URI, {
 Deps.get(EventHandler).init();
 
 bot.login(process.env.BOT_TOKEN);
+
+import "./dashboard/server.js";

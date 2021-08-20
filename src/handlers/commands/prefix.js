@@ -11,7 +11,7 @@ export default class extends Command{
 
     async execute (msg, value){
         const savedGuild = await this.guilds.get(msg.author.id)
-        if(!value) return await msg.reply(`Prefix is ${savedGuild.prefix}`);
+        if(!value || value.length<1) return await msg.reply(`Prefix is ${savedGuild.prefix}`);
         
         savedGuild.prefix = value[0];
         await savedGuild.save();
