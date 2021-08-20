@@ -1,0 +1,11 @@
+.jumbotron{
+    margin-top: 20vh;
+}
+
+#search{
+    max-width: 20vw;
+}
+
+.categories li{
+    cursor:pointer
+}

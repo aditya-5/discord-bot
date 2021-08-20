@@ -1,0 +1,26 @@
+include includes/mixin
+html(lang="en")
+    head
+        include includes/header
+        script(src="js/commands.js" defer)
+    body
+        include includes/navbar
+        .container
+            .jumbotron
+                .p-2.text-center
+                    h1.display-3 Command List 
+                        i.fab.fa-discord
+                    p.lead.text-left
+                        | Find 1PG's list of commands
+                    a.btn.btn-dark.btn-lg(href='#', role='button') Add
+            .container
+                div.d-flex.justify-content-center
+                    .form-group.m-2#search
+                        input.form-control(type="search")
+                .row
+                    .col-sm-3.p-1.categories
+                        each category in categories
+                            +category(category)
+                    .col-sm-9.p-1
+                        each command in commands
+                            +command(command)
