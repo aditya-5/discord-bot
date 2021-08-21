@@ -1,7 +1,6 @@
 mixin category(category)
-    ul.list-group
-        li.list-group-item.mb-2 #[i(class=category.icon)] #{category.name}
+    
+        li.list-group-item.mb-2(id=category.name) #[i(class=category.icon)] #{category.name}
 
 mixin command(command)
-    ul.list-group
-        li.list-group-item.mb-2 #{command.name}
+        li.list-group-item.mb-2(class=command.category, id=command.name) #{command.name}

@@ -7,5 +7,16 @@
 }
 
 .categories li{
-    cursor:pointer
+    cursor:5pointer
 }
+
+#searchBtn{
+    padding:10px 10px ;
+    font-size: 15px;
+    transition: 0.2s linear;
+}
+
+#searchBtn:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }

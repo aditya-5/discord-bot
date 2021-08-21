@@ -3,6 +3,8 @@ html(lang="en")
     head
         include includes/header
         script(src="js/commands.js" defer)
+        script(defer).
+            let commands = !{commandsString}
     body
         include includes/navbar
         .container
@@ -12,15 +14,17 @@ html(lang="en")
                         i.fab.fa-discord
                     p.lead.text-left
                         | Find 1PG's list of commands
-                    a.btn.btn-dark.btn-lg(href='#', role='button') Add
             .container
                 div.d-flex.justify-content-center
                     .form-group.m-2#search
                         input.form-control(type="search")
+                    button.btn.btn-sm.btn-danger#searchBtn Search
                 .row
                     .col-sm-3.p-1.categories
                         each category in categories
                             +category(category)
                     .col-sm-9.p-1
-                        each command in commands
-                            +command(command)
+                        ul.list-group.commands
+                            each command in commands
+                                +command(command)
+                        div.errorMsg NO COMMANDS UNDER THIS LIST
